@@ -1,4 +1,8 @@
 StormOlive::Application.routes.draw do
+  match '/about',   :to => 'pages#about'                                        
+  match '/blog',   :to => 'pages#blog'                                        
+
+  root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

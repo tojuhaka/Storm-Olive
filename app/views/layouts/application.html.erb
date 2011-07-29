@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>StormOlive</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/stylesheets' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/nav' %>
+    <div id="content">
+      <div id="mainContent">
+        <%= render 'layouts/main' %>
+      </div>
+      <%= render 'layouts/sidebar' %>
+    </div>
+    <%= render 'layouts/footer' %>
+  </body>
 </html>
+
