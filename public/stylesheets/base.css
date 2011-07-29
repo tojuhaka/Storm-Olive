@@ -41,6 +41,11 @@
         display: block;
     }
 
+    header .small_picture {
+        width: 120px;
+        height: 70px;
+    }
+
     body {
         margin: 0 auto;
         width: 940px;
