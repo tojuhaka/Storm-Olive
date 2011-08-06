@@ -14,7 +14,7 @@
         margin: 0;
         list-style: none;
         padding: 0;
-        
+
     }
     header#main_header ul li {
         float: left;
@@ -30,7 +30,7 @@
     }
     header#main_header ul li.float_right {
         float: right;
-    }   
+    }
     #sign_in {
         margin-top: 20px;
         margin-right: 30px;
@@ -118,34 +118,35 @@
 
     }
 
-    .blogPost {  
-        column-count: 2;  
-        column-gap: 22px;  
-        padding: 10px; 
-        /* Border-radius not implemented yet */  
-        -moz-border-radius: 11px;  
-        -webkit-border-radius: 11px;  
-    }  
-    .blogPost header {  
-        column-span: all;  
-    }  
+    .blogPost {
+        column-count: 2;
+        column-gap: 22px;
+        padding: 10px;
+        /* Border-radius not implemented yet */
+        -moz-border-radius: 11px;
+        -webkit-border-radius: 11px;
+    }
+    .blogPost header {
+        column-span: all;
+    }
 
-    section#comments article:nth-child(2n+1) {  
-        padding: 21px;  
-        background: #ACF53D;  
-        border: 1px solid #5C9900;  
-      
-        /* Border-radius not implemented yet */  
-        -moz-border-radius: 11px;  
-        -webkit-border-radius: 11px;  
-    }  
+    section#comments article:nth-child(2n+1) {
+        padding: 21px;
+        background: #ACF53D;
+        border: 1px solid #5C9900;
+
+
+        /* Border-radius not implemented yet */
+        -moz-border-radius: 11px;
+        -webkit-border-radius: 11px;
+    }
 
 /* Sidebar */
 
 aside {
-    border: 1px solid #5C9900;  
-    -moz-border-radius: 11px;  
-    -webkit-border-radius: 11px;  
+    border: 1px solid #5C9900;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
     display: table-cell;
     width: 300px;
     background: #ACF53D;
@@ -155,7 +156,7 @@ aside section {
     margin: 22px 22px 0 22px;
     padding: 11px 11px;
     background: url("../images/sidebar_section_background.png") repeat-x;
-    
+
     /* Border-radius not implemented yet */
     -moz-border-radius: 11px;
     -webkit-border-radius: 11px;
@@ -165,14 +166,13 @@ aside section {
         margin: 0 0 0 22px;
         list-style: none;
     }
-    B
-    
+
         aside section ul li a {
             display: block;
             text-decoration: none;
             color: #000;
         }
-        
+
             aside section ul li a:hover {
                 text-decoration: underline;
             }

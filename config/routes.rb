@@ -1,11 +1,12 @@
 StormOlive::Application.routes.draw do
-  get "users/new"
+  get "users/show"
 
-  match '/about',   :to => 'pages#about'                                        
-  match '/blog',   :to => 'pages#blog'                                        
-  match '/signup',   :to => 'users#new'                                        
+  match '/about',   :to => 'pages#about'
+  match '/blog',   :to => 'pages#blog'
+  match '/signup',   :to => 'users#new'
 
   root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
