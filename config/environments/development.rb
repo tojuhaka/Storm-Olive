@@ -1,5 +1,5 @@
-StormOlive::Application.configure do
 
+StormOlive::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 
   # In the development environment your application's code is reloaded on
@@ -23,5 +23,11 @@ StormOlive::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  require 'ruby-debug'
+  Debugger.settings[:autoeval] = true
+  Debugger.settings[:autolist] = 1
+  Debugger.settings[:reload_source_on_change] = true
+  Debugger.start_remote
+  SCRIPT_LINES__ = {} if ENV['RAILS_ENV'] == 'development'
 end
 
