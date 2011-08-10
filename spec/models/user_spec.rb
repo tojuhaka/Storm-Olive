@@ -2,11 +2,13 @@
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
 require 'spec_helper'
@@ -105,6 +107,23 @@ describe User do
 
       it "should be false if the password doesn't match" do
         @user.has_password?("invalid").should be_false
+      end
+    end
+
+    describe "authenticate method" do
+      it "should return nil on email/password mismatch" do
+        wrong_password = User.authenticate(@attr[:email], "wrongpass")
+        wrong_password.should be_nil
+      end
+      
+      it "should return nil for an email address with no user" do
+        nonexistent_user = User.authenticate("bar@foo.com", @attr[:password])
+        nonexistent_user.should be_nil
+      end
+
+      it "should return user on email/password match" do
+        user = User.authenticate(@attr[:email], @attr[:password])
+        user.should == @user
       end
     end
   end
