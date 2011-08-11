@@ -6,11 +6,6 @@ class UsersController < ApplicationController
   end
   
   def show
-    begin
-      @user = User.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      @user = User.new(:name => "Not found",
-                       :email => "notfound@error.com")
-    end
+    @user = User.find(params[:id])
   end
 end

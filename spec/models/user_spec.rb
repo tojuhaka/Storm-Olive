@@ -63,13 +63,14 @@ describe User do
   end
 
   describe "password validations" do
+
     it "should require a matchin password confirmation" do
       User.new(@attr.merge(:password_confirmation => "invalid"))
         .should_not be_valid
     end
 
     it "should require a password" do
-      User.new(@attr.merge(:password_confirmation => "invalid"))
+      User.new(@attr.merge(:password => "", :password_confirmation => ""))
         .should_not be_valid
     end
 
