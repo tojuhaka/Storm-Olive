@@ -1,4 +1,6 @@
 StormOlive::Application.routes.draw do
+  resources :users
+
   get "users/show"
 
   match '/about',   :to => 'pages#about'
