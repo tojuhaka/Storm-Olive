@@ -4,17 +4,18 @@ gem 'rails', '3.0.9'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'heroku'
 gem 'rake', "0.8.7"
+gem 'sqlite3', '1.3.3', :group => :development
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-group :development, :test do 
-  if RUBY_VERSION =~ /1.9/ 
-    gem 'ruby-debug19' 
-  else 
-    gem 'ruby-debug' 
-  end 
-end
+# group :development, :test do 
+#   if RUBY_VERSION =~ /1.9/ 
+#     gem 'ruby-debug19' 
+#   else 
+#     gem 'ruby-debug' 
+#   end 
+# end
 
 
 group :development do
