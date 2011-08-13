@@ -6,7 +6,7 @@ gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+
 group :development, :test do 
   if RUBY_VERSION =~ /1.9/ 
     gem 'ruby-debug19' 
@@ -19,6 +19,7 @@ end
 group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 group :test do
