@@ -7,7 +7,14 @@ gem 'heroku'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'ruby-debug19'
+group :development, :test do 
+  if RUBY_VERSION =~ /1.9/ 
+    gem 'ruby-debug19' 
+  else 
+    gem 'ruby-debug' 
+  end 
+end
+
 
 group :development do
   gem 'rspec-rails', '2.6.1'
