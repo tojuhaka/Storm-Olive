@@ -23,10 +23,10 @@ StormOlive::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
-  Debugger.settings[:autoeval] = true
-  Debugger.settings[:autolist] = 1
-  Debugger.settings[:reload_source_on_change] = true
-  Debugger.start_remote
-  SCRIPT_LINES__ = {} if ENV['RAILS_ENV'] == 'development'
+  # Debugger.settings[:autoeval] = true
+  # Debugger.settings[:autolist] = 1
+  # Debugger.settings[:reload_source_on_change] = true
+  # Debugger.start_remote
+  # SCRIPT_LINES__ = {} if ENV['RAILS_ENV'] == 'development'
 end
 
