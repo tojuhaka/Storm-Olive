@@ -1,5 +1,3 @@
-require 'ruby-debug'
-
 class UsersController < ApplicationController
   def new
     @title = "Sign up"
