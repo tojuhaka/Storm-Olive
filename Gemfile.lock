@@ -35,10 +35,22 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    excon (0.6.5)
     factory_girl (1.3.3)
     factory_girl_rails (1.0)
       factory_girl (~> 1.3)
       rails (>= 3.0.0.beta4)
+    fog (0.10.0)
+      builder
+      excon (~> 0.6.5)
+      formatador (~> 0.2.0)
+      mime-types
+      multi_json (~> 1.0.3)
+      net-scp (~> 1.0.4)
+      net-ssh (~> 2.1.4)
+      nokogiri (~> 1.5.0)
+      ruby-hmac
+    formatador (0.2.0)
     gravatar_image_tag (1.0.0.pre2)
     heroku (2.4.1)
       launchy (>= 0.3.2)
@@ -53,6 +65,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    multi_json (1.0.3)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-ssh (2.1.4)
     nokogiri (1.5.0)
     polyglot (0.3.2)
     rack (1.2.3)
@@ -91,6 +107,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
+    ruby-hmac (0.4.0)
     sqlite3 (1.3.3)
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
@@ -111,6 +128,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (= 2.4.0)
   factory_girl_rails (= 1.0)
+  fog
   gravatar_image_tag (= 1.0.0.pre2)
   heroku
   rails (= 3.0.9)
