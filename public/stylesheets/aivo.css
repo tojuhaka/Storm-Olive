@@ -1,0 +1,259 @@
+
+  /* Makeshift CSS Reset */
+  {
+      margin: 0;
+      padding: 0;
+  }
+  header#main_header {
+      padding: 0;
+      margin: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+  header#main_header ul {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+
+  }
+  header#main_header ul li {
+      float: left;
+      margin:0;
+      padding: 0;
+  }
+
+  header#main_header ul li h1 {
+      font-size: 40px;
+      margin: 0;
+      padding: 0;
+      margin-top:15px;
+      color: #FFFFFF;
+  }
+  header#main_header ul li.float_right {
+      float: right;
+  }
+  #sign_in {
+      margin-top: 20px;
+      margin-right: 30px;
+
+  }
+  /* Tell the browser to render HTML 5 elements as block */
+  header, footer, aside, nav, article {
+      display: block;
+  }
+
+  header .small_picture {
+      display: None;
+      width: 120px;
+      height: 70px;
+  }
+
+  body {
+      margin: 0 auto;
+      width: 940px;
+      font: 13px/22px Helvetica, Arial, sans-serif;
+      background: #000000;
+  }
+
+  h2 {
+      font-size: 28px;
+      line-height: 44px;
+      padding: 22px 0;
+      color: #FFFFFF;
+  }
+
+  h3 {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 11px 0;
+  }
+
+  p {
+      padding-bottom: 22px;
+      color: #FFFFFF;
+  }
+/*Navigation*/
+nav {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #333333;
+    border: 1px solid #666666;
+    margin-top:60px;
+}
+nav ul {
+    margin: 0 auto;
+    width: 940px;
+    list-style: none;
+}
+
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    margin-right: 20px;
+    width: 140px;
+    font-size: 14px;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li.selected a {
+    color: #fff;
+}
+
+/* Content */
+#content {
+    display: table;
+    float: left;
+    margin-top: 20px;
+    padding-top: 50px;
+    width:100%;
+}
+
+#mainContent {
+    display: table-cell;
+    padding-right: 22px;
+
+}
+
+.blogPost {
+    column-count: 2;
+    column-gap: 22px;
+    padding: 10px;
+    /* Border-radius not implemented yet */
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+}
+.blogPost header {
+    column-span: all;
+}
+
+section#comments article:nth-child(2n+1) {
+    padding: 21px;
+    background: #333333;
+    border: 1px solid #666666;
+
+
+    /* Border-radius not implemented yet */
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+}
+
+/* Sidebar */
+
+aside {
+    border: 1px solid #666666;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    display: table-cell;
+    width: 300px;
+    background: #333333;
+    padding: 0;
+}
+aside section {
+    margin: 22px 22px 0 22px;
+    padding: 11px 11px;
+    background: url("../images/sidebar_section_background.png") repeat-x;
+
+    /* Border-radius not implemented yet */
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+}
+
+    aside section ul {
+        margin: 0 0 0 22px;
+        list-style: none;
+    }
+
+        aside section ul li a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+        }
+
+            aside section ul li a:hover {
+                text-decoration: underline;
+            }
+
+footer {
+    float: left;
+}
+
+/* User show page */
+
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+td.main {
+  width: 70%;
+  padding: 1em;
+  background: #ffc;
+}
+
+td.sidebar {
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+  background: #ffc;
+}
+
+.profile img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* Signup error box */
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
