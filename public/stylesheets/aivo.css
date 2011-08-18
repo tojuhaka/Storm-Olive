@@ -218,16 +218,22 @@ td.sidebar {
 
 div.field, div.actions {
   margin-bottom: 10px;
+  margin-top: 5px;
 }
 
+div.field input {
+  background-color: #222222;
+  color: #FFFFFF;
+}
 div.field label {
   color: #FFFFFF;
 }
 
+.round h1 {
+  color: #FFFFFF;
+}
 /* Signup error box */
 .field_with_errors {
-  margin-top: 10px;
-  padding: 2px;
   background-color: red;
   display: table;
 }
@@ -242,7 +248,7 @@ div.field label {
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #111111;
 }
 
 #error_explanation h2 {
@@ -259,9 +265,11 @@ div.field label {
   color: #333;
   margin-bottom: 0;
   padding: 5px;
+  color: #FFFFFF;
 }
 
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+  color: #FFFFFF;
 }

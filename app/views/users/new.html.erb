@@ -1,23 +1,23 @@
-<h1>Sign up</h1>
+<h1>Rekistöröityäksesi käyttäjäksi täytä seuraavat tiedot</h1>
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages' %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name , "Nimi:"%><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email , "Sähköposti:"%><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password , "Salasana:"%><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.label :password_confirmation, "Salasana uudelleen:" %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Lähetä" %>
   </div>
 <% end %>
