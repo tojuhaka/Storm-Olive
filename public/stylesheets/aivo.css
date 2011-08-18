@@ -77,8 +77,8 @@ nav {
     position: absolute;
     left: 0;
     width: 100%;
-    background: #333333;
-    border: 1px solid #666666;
+    background: #111111;
+    border: 1px solid #222222;
     margin-top:60px;
 }
 nav ul {
@@ -138,8 +138,8 @@ nav ul li.selected a {
 
 section#comments article:nth-child(2n+1) {
     padding: 21px;
-    background: #333333;
-    border: 1px solid #666666;
+    background: #111111;
+    border: 1px solid #222222;
 
 
     /* Border-radius not implemented yet */
@@ -150,16 +150,16 @@ section#comments article:nth-child(2n+1) {
 /* Sidebar */
 
 aside {
-    border: 1px solid #666666;
+    border: 1px solid #222222;
     -moz-border-radius: 11px;
     -webkit-border-radius: 11px;
-    display: table-cell;
+    margin-top: 10px;
     width: 300px;
-    background: #333333;
+    background: #111111;
     padding: 0;
 }
 aside section {
-    margin: 22px 22px 0 22px;
+    margin: 22px 22px 22px 22px;
     padding: 11px 11px;
     background: url("../images/sidebar_section_background.png") repeat-x;
 
@@ -168,15 +168,19 @@ aside section {
     -webkit-border-radius: 11px;
 }
 
-    aside section ul {
-        margin: 0 0 0 22px;
-        list-style: none;
-    }
+aside section h3 {
+  color: #FFFFFF;
+
+}
+aside section ul {
+    margin: 0 0 0 8px;
+    list-style: none;
+}
 
         aside section ul li a {
             display: block;
             text-decoration: none;
-            color: #000;
+            color: #FFFFFF;
         }
 
             aside section ul li a:hover {
@@ -214,6 +218,10 @@ td.sidebar {
 
 div.field, div.actions {
   margin-bottom: 10px;
+}
+
+div.field label {
+  color: #FFFFFF;
 }
 
 /* Signup error box */
