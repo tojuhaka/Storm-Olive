@@ -1,4 +1,5 @@
 StormOlive::Application.routes.draw do
+  resources :sessions, :only => [:new, :create, :destroy]
   resources :users
 
   get "users/show"
@@ -6,6 +7,7 @@ StormOlive::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/blog',   :to => 'pages#blog'
   match '/signup',   :to => 'users#new'
+  match '/signin',   :to => 'sessions#new'
 
   root :to => 'pages#home'
 

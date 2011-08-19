@@ -2,27 +2,27 @@
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages' %>
   <div class="field">
-    <%= f.label :firstname , "Etunimi:"%><br />
+    <%= f.label :firstname , "Etunimi:"%>
     <%= f.text_field :firstname %>
   </div>
   <div class="field">
-    <%= f.label :lastname , "Sukunimi:"%><br />
+    <%= f.label :lastname , "Sukunimi:"%>
     <%= f.text_field :lastname %>
   </div>
   <div class="field">
-    <%= f.label :nick , "Tunnus:"%><br />
+    <%= f.label :nick , "Tunnus:"%>
     <%= f.text_field :nick %>
   </div>
   <div class="field">
-    <%= f.label :email , "Sähköposti:"%><br />
+    <%= f.label :email , "Sähköposti:"%>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password , "Salasana:"%><br />
+    <%= f.label :password , "Salasana:"%>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Salasana uudelleen:" %><br />
+    <%= f.label :password_confirmation, "Salasana uudelleen:" %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
