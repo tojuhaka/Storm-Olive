@@ -3,11 +3,12 @@
     <td class="main">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.nick %>
       </h1>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%= @user.name %><br />
+      <strong>Etunimi:</strong> <%= @user.firstname %><br />
+      <strong>Sukunimi:</strong> <%= @user.lastname %><br />
       <strong>URL</strong>  <%= link_to user_url(@user), @user %>
     </td>
   </tr>

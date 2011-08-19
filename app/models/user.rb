@@ -3,7 +3,9 @@
 # Table name: users
 #
 #  id                 :integer         not null, primary key
-#  name               :string(255)
+#  firstname          :string(255)
+#  lastname           :string(255)
+#  nick               :string(255)
 #  email              :string(255)
 #  created_at         :datetime
 #  updated_at         :datetime
@@ -13,12 +15,23 @@
 
 class User < ActiveRecord::Base
     attr_accessor :password
-    attr_accessible :name, :email, :password, :password_confirmation
+    attr_accessible :firstname, :lastname, :nick, 
+                    :email, :password, :password_confirmation
+                    
+                    
 
     email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-    validates :name, :presence => true,
-                     :length => { :maximum => 50 }
+    validates :firstname, :presence => true,
+                          :length => { :maximum => 50 }
+
+    validates :lastname, :presence => true,
+                          :length => { :maximum => 50 }
+
+    validates :nick, :presence => true,
+                     :uniqueness => { :case_sensitive => false },
+                          :length => { :maximum => 19 }
+
     validates :email, :presence => true,
                       :format => { :with => email_regex },
                       :uniqueness => { :case_sensitive => false }

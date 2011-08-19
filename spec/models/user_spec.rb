@@ -3,7 +3,9 @@
 # Table name: users
 #
 #  id                 :integer         not null, primary key
-#  name               :string(255)
+#  firstname          :string(255)
+#  lastname           :string(255)
+#  nick               :string(255)
 #  email              :string(255)
 #  created_at         :datetime
 #  updated_at         :datetime
@@ -15,7 +17,9 @@ require 'spec_helper'
 
 describe User do
   before (:each) do
-    @attr = {:name => "Example user", 
+    @attr = {:firstname => "Example", 
+             :lastname => "User",
+             :nick => "Exus",
              :email => "user@example.com", 
              :password => "foobar", 
              :password_confirmation => "foobar"}
@@ -24,16 +28,38 @@ describe User do
   it "Should create a new instance given valid attributes" do
     User.create!(@attr)
   end
-
-  it "should require a name" do
-    no_name_user = User.new(@attr.merge(:name => ""))
-    no_name_user.should_not be_valid
+  
+  it "should require a firstname" do
+    no_firstname_user = User.new(@attr.merge(:firstname => ""))
+    no_firstname_user.should_not be_valid
   end
   
-  it "should require length for name" do
-    long_name = "s" * 51
-    long_name_user = User.new(@attr.merge(:name => long_name))
-    long_name_user.should_not be_valid
+  it "should require length for firstname" do
+    long_firstname = "s" * 51
+    long_firstname_user = User.new(@attr.merge(:firstname => long_firstname))
+    long_firstname_user.should_not be_valid
+  end 
+
+  it "should require a lastname" do
+    no_lastname_user = User.new(@attr.merge(:lastname => ""))
+    no_lastname_user.should_not be_valid
+  end
+  
+  it "should require length for lastname" do
+    long_lastname = "s" * 51
+    long_lastname_user = User.new(@attr.merge(:lastname => long_lastname))
+    long_lastname_user.should_not be_valid
+  end 
+
+  it "should require a nick" do
+    no_nick = User.new(@attr.merge(:nick => ""))
+    no_nick.should_not be_valid
+  end
+  
+  it "should require length for nick" do
+    long_nick = "s" * 20
+    long_nick = User.new(@attr.merge(:nick => long_nick))
+    long_nick.should_not be_valid
   end 
 
   it "should require an email address" do

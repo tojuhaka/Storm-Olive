@@ -2,8 +2,16 @@
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages' %>
   <div class="field">
-    <%= f.label :name , "Nimi:"%><br />
-    <%= f.text_field :name %>
+    <%= f.label :firstname , "Etunimi:"%><br />
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname , "Sukunimi:"%><br />
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :nick , "Tunnus:"%><br />
+    <%= f.text_field :nick %>
   </div>
   <div class="field">
     <%= f.label :email , "Sähköposti:"%><br />

@@ -4,7 +4,8 @@ describe UsersController do
   render_views
 
   before (:each) do
-    User.new(:name => "Toni Haka-Risku",
+    User.new(:firstname => "Toni",
+             :lastname => "Haka-Risku",
              :email => "tojuhaka@gmail.com").save
   end
 
@@ -38,12 +39,12 @@ describe UsersController do
 
     it "should have the right title" do
       get :show, :id => @user.id
-      response.should have_selector("title", :content => @user.name)
+      response.should have_selector("title", :content => @user.nick)
     end
 
     it "should include the user's name" do
       get :show, :id => @user.id
-      response.should have_selector("h1", :content => @user.name)
+      response.should have_selector("h1", :content => @user.nick)
     end
 
     it "should have a profile image" do
@@ -56,8 +57,8 @@ describe UsersController do
 
     describe "failure" do
       before(:each) do
-        @attr = { :name => "", :email => "", :password => "",
-                  :password_confirmation => "" }
+        @attr = { :firstname => "", :lastname => "", :nick => "", :email => "", 
+                  :password => "", :password_confirmation => "" }
       end
 
       it "should not create a user" do
@@ -84,8 +85,9 @@ describe UsersController do
 
     describe 'success' do
       before (:each) do 
-        @attr = { :name => "New user", :email => "user@example.com",
-                  :password => "foobar", :password_confirmation => "foobar" }
+        @attr = { :firstname => "New", :lastname => "User", :nick => "Exus",
+                  :email => "user@example.com", :password => "foobar", 
+                  :password_confirmation => "foobar" }
       end
 
       it "should create a user" do
@@ -101,7 +103,7 @@ describe UsersController do
 
       it "should have a welcome message" do
         post :create, :user => @attr
-        flash[:success].should =~ /welcome to the sample app/i
+        flash[:success].should =~ /welcome!/i
       end
     end
   end
