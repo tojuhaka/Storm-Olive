@@ -8,6 +8,7 @@ StormOlive::Application.routes.draw do
   match '/blog',   :to => 'pages#blog'
   match '/signup',   :to => 'users#new'
   match '/signin',   :to => 'sessions#new'
+  match '/signout',   :to => 'sessions#destroy'
 
   root :to => 'pages#home'
 
