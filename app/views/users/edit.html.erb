@@ -1,0 +1,36 @@
+<h1>Edit user</h1>
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :firstname , "Etunimi:"%>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname , "Sukunimi:"%>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :nick , "Tunnus:"%>
+    <%= f.text_field :nick %>
+  </div>
+  <div class="field">
+    <%= f.label :email , "Sähköposti:"%>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password , "Salasana:"%>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Salasana uudelleen:" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Lähetä" %>
+  </div>
+<% end %>
+
+<div>
+  <%= gravatar_for @user %>
+  <a href="http://gravatar.com/emails">change</a>
+</div>
