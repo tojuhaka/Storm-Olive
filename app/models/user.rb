@@ -57,7 +57,7 @@ class User < ActiveRecord::Base
       return nil if user.nil?
       return user if user.salt == cookie_salt
     end
-
+#remove this comment
     private
       def encrypt_password
         self.salt = make_salt if new_record?
