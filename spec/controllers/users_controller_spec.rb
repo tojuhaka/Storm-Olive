@@ -106,5 +106,10 @@ describe UsersController do
         flash[:success].should =~ /welcome!/i
       end
     end
-  end
+    describe "GET 'edit'"
+      before (:each) do
+        @user = Factory(:user)
+        test_sign_in(@user)
+      end
+    end
 end
