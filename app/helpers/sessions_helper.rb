@@ -17,7 +17,8 @@ module SessionsHelper
   end
 
   def signed_in?
-    !current_user.nil?
+    # !current_user.nil? doesnt work TODO: why?
+    !@current_user.nil?
   end
 
   def sign_out
