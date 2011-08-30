@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:success] = "Welcome!"
+      sign_in @user
       redirect_to user_path(@user)
     else 
       @title = "Sign up"
@@ -23,5 +24,10 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     @title = "Muokkaa"
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to users_path
   end
 end
