@@ -3,9 +3,9 @@
         <li>
         <h1>Aivolävistys </h1>
         </li>
-        <li>
-        <%= image_tag("olives.png", :class => "small_picture") %>
-        </li>
+        <% if signed_in? %>
+            <li><h1>TOIMII</h1></li>
+        <% end %>
     </ul>
 </header>
 

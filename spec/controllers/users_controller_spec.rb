@@ -122,10 +122,5 @@ describe UsersController do
         response.should have_selector("title", :content => "Muokkaa")
       end
 
-      it "should have a link to change the Gravatar" do
-        get :edit, :id => @user.id
-        response.should have_selector("a", :href => gravatar_url,
-                                           :content => "change")
-      end
     end
 end
